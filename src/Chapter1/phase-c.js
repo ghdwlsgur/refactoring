@@ -4,7 +4,7 @@ const invoice = require('./invoices.json');
 const plays = require('./plays.json');
 
 /**====================================================
- * 함수 추출하기
+ * 변수 인라인하기
  * @param {object[]} invoice
  * @param {object} plays
  * @returns {string}
@@ -25,14 +25,18 @@ function statement(invoice, plays) {
   }).format;
 
   for (let perf of invoice[0].performances) {
-    const play = plays[perf.playID];
-    let thisAmount = amountFor(perf, play); // 추출한 함수 이용
+    // const play = playFor(perf); // 우변을 함수로 추출 -> 인라인된 변수는 제거
+    let thisAmount = amountFor(perf, playFor(perf)); // 변수 인라인1
 
+    // 포인트를 적립한다.
     volumeCredits += Math.max(perf.audience - 30, 0);
-    if ('comedy' === play.type) volumeCredits += Math.floor(perf.audience / 5);
+    // 변수 인라인2
+    if ('comedy' === playFor(perf).type)
+      volumeCredits += Math.floor(perf.audience / 5);
 
+    // 청구내역을 출력한다. 변수 인라인3
     // eslint-disable-next-line prettier/prettier
-    result += `  ${play.name}: ${format(thisAmount / 100)} (${perf.audience}석)\n`;
+    result += `  ${playFor(perf).name}: ${format(thisAmount / 100)} (${perf.audience}석)\n`;
     totalAmount += thisAmount;
   }
   result += `총액: ${format(totalAmount / 100)}\n`;
@@ -62,6 +66,10 @@ function amountFor(perf, play) {
       throw new Error(`알 수 없는 장르: ${play.type}`);
   }
   return result; // 함수 안에서 값이 바뀌는 변수 반환
+}
+
+function playFor(aPerformance) {
+  return plays[aPerformance.playID];
 }
 
 const result = statement(invoice, plays);

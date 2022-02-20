@@ -4,7 +4,7 @@ const invoice = require('./invoices.json');
 const plays = require('./plays.json');
 
 /**====================================================
- * 함수 추출하기 !
+ * 함수 추출하기
  * @param {object[]} invoice
  * @param {object} plays
  * @returns {string}

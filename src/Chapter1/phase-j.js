@@ -1,7 +1,7 @@
 'use strict';
 
-const invoice = require('./invoices.json');
-const plays = require('./plays.json');
+const invoice = require('./data/invoices.json');
+const plays = require('./data/plays.json');
 
 /**====================================================
  * 임시 변수를 질의 함수로 바꾸기

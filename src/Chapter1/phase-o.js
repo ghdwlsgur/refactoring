@@ -1,7 +1,7 @@
 'use strict';
 
-const invoice = require('./invoices.json');
-const plays = require('./plays.json');
+const invoice = require('./data/invoices.json');
+const plays = require('./data/plays.json');
 
 /**====================================================
  * 중간 데이터 구조를 인수로 전달

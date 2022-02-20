@@ -1,7 +1,7 @@
 'use strict';
 
-const invoice = require('./invoices.json');
-const plays = require('./plays.json');
+const invoice = require('./data/invoices.json');
+const plays = require('./data/plays.json');
 
 /**====================================================
  * 적립 포인트 계산 코드 추출하기

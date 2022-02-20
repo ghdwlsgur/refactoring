@@ -1,8 +1,7 @@
 'use strict';
 
-const invoice = require('./invoices.json');
-const plays = require('./plays.json');
-
+const invoice = require('./data/invoices.json');
+const plays = require('./data/plays.json');
 /**====================================================
  * 얕은 복사 수행
  * @param {object[]} invoice

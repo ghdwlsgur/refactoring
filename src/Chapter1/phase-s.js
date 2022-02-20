@@ -1,7 +1,7 @@
 'use strict';
 
-const invoice = require('./invoices.json');
-const plays = require('./plays.json');
+const invoice = require('./data/invoices.json');
+const plays = require('./data/plays.json');
 
 /**====================================================
  * 반복문을 파이프라인으로 바꾸기, 단계 분리하기

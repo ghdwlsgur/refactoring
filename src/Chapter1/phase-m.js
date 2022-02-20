@@ -1,7 +1,7 @@
 'use strict';
 
-const invoice = require('./invoices.json');
-const plays = require('./plays.json');
+const invoice = require('./data/invoices.json');
+const plays = require('./data/plays.json');
 
 /**====================================================
  * 변수 인라인 후 함수 이름 바꾸기

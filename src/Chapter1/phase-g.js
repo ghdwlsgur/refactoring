@@ -4,7 +4,7 @@ const invoice = require('./invoices.json');
 const plays = require('./plays.json');
 
 /**====================================================
- * format 변수 제거하기
+ * format 변수 제거하기 !
  * @param {object[]} invoice
  * @param {object} plays
  * @returns {string}

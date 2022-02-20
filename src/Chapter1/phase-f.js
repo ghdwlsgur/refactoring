@@ -4,7 +4,7 @@ const invoice = require('./invoices.json');
 const plays = require('./plays.json');
 
 /**====================================================
- * 적립 포인트 계산 코드 추출하기
+ * 적립 포인트 계산 코드 추출하기 !
  * @param {object[]} invoice
  * @param {object} plays
  * @returns {string}

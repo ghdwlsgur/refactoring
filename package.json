@@ -1,6 +1,7 @@
 {
   "name": "one-day-one-algorithms",
   "packageManager": "yarn@3.1.1",
+  "license": "MIT",
   "scripts": {
     "lint": "eslint ./src/*",
     "prod": "cross-env NODE_ENV=production nodemon --exec babel-node src/index.js",

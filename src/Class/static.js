@@ -1,3 +1,5 @@
+'use strict';
+
 class ClassWithStaticMethod {
   static staticProperty = 'someValue';
   static staticMethod() {

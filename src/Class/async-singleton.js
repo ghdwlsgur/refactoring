@@ -1,3 +1,5 @@
+'use strict';
+
 class AsyncSingleton {
   static _instance;
 

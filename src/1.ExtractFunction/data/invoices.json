@@ -1,0 +1,15 @@
+
+{
+  "customer": "JinhyeokCompany",
+  "dueDate": "",
+  "orders": [
+    {
+      "item": "chicken",
+      "amount": 30
+    },
+    {
+      "item": "pizza",
+      "amount": 30
+    }
+  ]
+}

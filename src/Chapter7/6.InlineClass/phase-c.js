@@ -1,0 +1,54 @@
+'use strict';
+
+class TrackingInformation {
+  constructor(data) {
+    this._shippingCompany = data.shippingCompany;
+    this._trackingNumber = data.trackingNumber;
+  }
+  get shippingCompany() {
+    return this._shippingCompany;
+  }
+
+  set shippingCompany(arg) {
+    this._shippingCompany = arg;
+  }
+
+  get trackingNumber() {
+    return this._trackingNumber;
+  }
+
+  set trackingNumber(arg) {
+    this._trackingNumber = arg;
+  }
+
+  get display() {
+    return `${this.shippingCompany}: ${this.trackingNumber}`;
+  }
+}
+
+class Shipment {
+  constructor(data) {
+    this._trackingNumber = data.trackingNumber;
+    this._shippingCompany = data.shippingCompany;
+  }
+
+  get trackingInfo() {
+    return `${this.shippingCompany}: ${this.trackingNumber}`;
+  }
+
+  get trackingNumber() {
+    return this._trackingNumber;
+  }
+
+  set trackingNumber(arg) {
+    this._trackingNumber = arg;
+  }
+
+  get shippingCompany() {
+    return this._shippingCompany;
+  }
+
+  set shippingCompany(arg) {
+    this._shippingCompany = arg;
+  }
+}
